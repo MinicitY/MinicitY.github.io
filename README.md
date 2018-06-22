@@ -1,22 +1,32 @@
-## **算法是个好工具。**
-&nbsp;
-同样是搬砖，会用卡车和滑轮的工人明显比徒手挖地基的更值得雇佣~~（虽然仍然摆脱不了搬砖的命运）~~作为注重“搬砖方式”的一门学问，算法专注于在结果与计算性质的问题之间制造“虫洞”。
-&nbsp;
+# About
 
-> 行业标杆《算法导论》确实可以称得上是一本神书……
-&nbsp;
+This is my blog based on jekyll. And I change the style and interactive. If you want to use this model of the blog. **Please give a star at this repository**. Then you can clone it as your blog model.
 
-粗略翻过《算法导论》后，可以说这本书一点也不 “introduction”。比如，即使我先前上过基础的算法课，也会发现第一部分的“基础知识”中有不少没接触过的知识（当然这些我之后会较多提及）。这本书把算法分为七个大部分：
-&nbsp;
+You can visit [here](http://gaohaoyang.github.io) to see this blog.
 
-> - 基础知识
-> - 排序与顺序统计量
-> - 基本数据结构
-> - 魔法级别的分析技术
-> - 高级数据结构
-> - 图论
-> - 一些实际的算法问题（比如，P and NP）
-&nbsp;
+---
 
-这个系列旨在按上述顺序，对我认为**关键&生疏&困难**的算法导论上的知识点进行梳理和总结（并不是笔记）。简单的章节将合并。另外地，一些不在算法导论上的知识（比如快排的多种写法）也会被探讨。同时，考虑到算法导论特有的陡峭学习曲线和个人先修知识面的不同，这个系列并不具有阅读普适性：P
+这是我的博客，基于 jekyll。我改了所有默认的样式和交互。如果你想使用这个博客模板。**请先在这个仓库上点个star吧**，这也是对我的肯定和鼓励，谢谢了。然后你可以克隆这个仓库用作你自己的博客。
+
+博客访问地址：[点击这里](http://gaohaoyang.github.io)
+
+**使用时请注明模板来源:  Jekyll theme by [Gaohaoyang](https://github.com/Gaohaoyang/gaohaoyang.github.io)**
+
+<!--
+
+## 被引用信息
+
+使用了我的模板并写明来源的人：   
+
+* [dreamholy](http://dreamholy.github.io/)
+
+没有注明来源的人：
+
+* [yangshuailing](http://yangshuailing.github.io/com/)
+* [huapu728](http://huapu728.github.io/)
+* [greatbuger](http://greatbuger.github.io/) 
+
+
+-->
+
 
