@@ -30,12 +30,12 @@ tags: 分治法
 
 ``` java
 1 for index = 2 to array.length {
-2  key = A[index]
+2  key = array[index]
 3  index2 = index – 1
 4  while index2 > 0 && array[index2]> key {
 5   array[index2 + 1] = array[index2]
 6   index2 = index2 - 1}
-7  Array[index2+1] = key}
+7  array[index2 + 1] = key}
 ```
 
 显而易见地，对于一个近似有序的数据，插入排序的时间复杂度是n，而同为原址排序的快速排序是可能是n^2。这是除了小数据量以外唯一我能想到的插排比快排稳定的时候了。
@@ -65,12 +65,15 @@ tags: 分治法
 
 显然地，当目标无限近似有序时，求和部分变成 n-1， 那么该算法所消耗的时间只取决于 n 的大小和每行的「cost」。当目标无限近似反向有序时，求和部分变成n(n+1)/2-1 以及 n(n-1)/2，那么最坏情况下T(n)将变成n的二次函数，取决于n^2的大小和每行的「cost」。
 
+***
+
 #### 归并排序的分析
 
 归并排序的伪代码和过程不再赘述。值得一提的是，归并排序是先分后治，分的时候基于递归，而合并的时候基于迭代。迭代的过程又是一种**数学归纳法**，因此归并排序算法的正确性是可以容易地证明的。分治策略的通用递归式和上下界处理将在第四章和第八章进一步讨论。
 
 ![](https://github.com/MinicitY/MyImg/blob/master/mergeSort.png?raw=true)
 
+_总 cost = cnlogn+cn的由来，另一个cn比较次数将在之后讨论_
 ## **时间复杂度**
 占位
 
