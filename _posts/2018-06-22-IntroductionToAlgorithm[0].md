@@ -3,7 +3,7 @@ layout: post
 title:  "《算法导论》注解Chapter[序]"
 date:   2018-06-22
 categories: Algorithm
-
+tags: 《算法导论》
 ---
 
 * content

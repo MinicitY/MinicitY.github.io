@@ -32,7 +32,7 @@ type: page
 
 ## 友情链接
 
- [Lin Xiaomo](https://www.anotherhome.net) \| [Robin](http://robin-blog.com/)
+[LinXiaomo](https://mp.weixin.qq.com/s/f9OVRfYoz8WHMaqGWpz4dg) \| [Robin](http://robin-blog.com/)
 
 ## Comments
 
