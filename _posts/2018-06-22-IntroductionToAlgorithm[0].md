@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "《算法导论》注解Chapter[序]"
+title:  "《算法导论》注解Chapter[0]"
 date:   2018-06-22
 author: MinicitY
 categories: Algorithm
