@@ -12,7 +12,7 @@ tags: 分治法
 ## **Preview**
 写在前面：决定还是简要讲下这三章。毕竟算法分析和渐进求解也算是我的弱项：P
 
-关键字： `数学归纳法` `分治法` `渐进记号` 
+Keywords： `数学归纳法` `分治法` `渐进记号` 
 
 先修知识：
 
@@ -71,7 +71,7 @@ tags: 分治法
 
 ![](https://github.com/MinicitY/MyImg/blob/master/mergeSort.png?raw=true)
 
-_`full cost = cnlogn+cn`的由来，另一个 cn 比较次数将在之后讨论_
+_`full cost = cnlogn + cn`的由来，另一个 cn 比较次数将在之后讨论_
 ## **时间复杂度**
 
 >Θ(g(n)) = {f(n): 存在正常量c1, c2和n0，使得对所有n>=n0， 有0 <= c1g(n) <= f(n) <= c2g(n)}
