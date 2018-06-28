@@ -1,10 +1,10 @@
- ---
+---
 layout: post
 title:  "算导注解Chapter[1&2&3]"
 date:   2018-06-23
 author: MinicitY
 categories: Algorithm
-tags: 分治法 
+tags: 分治法
 ---
 
 * content
