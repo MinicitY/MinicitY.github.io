@@ -40,7 +40,7 @@ RIGHT(i)
 return 2i+1
 ```
 
-<embed src="//music.163.com/style/swf/widget.swf?sid=467166229&type=2&auto=0&width=278&height=32" width="298" height="52"  allowNetworking="all"></embed>
+<object width="340" height="86" data="http://music.163.com/style/swf/widget.swf?sid=467166229&type=2&auto=0&width=320&height=66" type="application/x-shockwave-flash"></object>
 
 
 ## **维护堆的性质**
@@ -114,8 +114,11 @@ MAX-HEAPIFY(A,1)
 优先队列是堆排序的一个重要应用。操作系统的作业调度又是优先队列的一个重要应用。最大堆实现最大优先队列，最小堆实现最小优先队列。我们依然以最大堆为例，它实现的最大优先队列支持下列操作：
 
 >MAXIMUM(S)：返回S中具有最大键字的元素
+>
 >EXTRACT-MAX(S)：去掉并返回S中的具有最大键字的元素
+>
 >INCREASE-KEY(S,x,k)：将元素x的关键字值增加到k，这里假设k值不小于x的原关键字值
+>
 >INSERT(S,x)：把元素x插入集合S中
 
 按上述顺序思考下伪代码。MAXIMUM很容易，只要return A[1]就行了。EXTRACT-MAX和堆排中的循环部分差不多。INCREASE把指定位置的结点升值，然后需要往上交换以维护最大堆的性质。INSERT是在叶子加一个无限小的值，再利用INCREASE升值并维护。
