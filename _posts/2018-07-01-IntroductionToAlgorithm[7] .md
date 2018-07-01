@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "算导注解Chapter[6]"
+title:  "算导注解Chapter[7]"
 date:   2018-07-01
 author: MinicitY
 categories: Algorithm
