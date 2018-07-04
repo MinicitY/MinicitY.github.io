@@ -102,7 +102,7 @@ _对于常数1:9的情况下的快速排序的递归树_
 
 还是只讨论一分为二。定理 _**在最坏的情况下，任何比较排序算法都需要做Ω(nlogn)次比较。**_ 告诉了我们最坏情况的下界（证明在下章）。如果我们想要依赖一分为二的思想写一个新的算法，就不要对突破nlogn抱有希望了。
 
-最后附上快速排序的typescript的实例代码 **（Author: Robin）**
+最后附上快速排序的typescript的实例代码 **（Author: [Robin](http://www.robin-blog.com/)）**
 
 ![](https://github.com/MinicitY/MyImg/blob/master/%E5%BF%AB%E6%8E%92%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81.png?raw=true)
 
