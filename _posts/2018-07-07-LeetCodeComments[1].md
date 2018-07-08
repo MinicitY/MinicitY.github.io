@@ -4,7 +4,7 @@ title:  "LeetCode初级算法-数组（上）"
 date:   2018-07-07
 author: MinicitY
 categories: LeetCode
-tags: 
+tags: 数组
 ---
 
 * content
