@@ -23,6 +23,9 @@ tags: 数组
 >Output: [1,2,4]
 >Explanation: The array represents the integer 123.
 
+
+
+
 几个需要处理的情形：初始值是0；遇到9需要进位；遇到连续的9需要连续进位；最高位不是9要在最高位停止进位；最高位是9需要初始化新数组以储存新数字10^k。
 
 ```java
