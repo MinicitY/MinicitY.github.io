@@ -1,23 +1,32 @@
-    <script type="text/javascript">
-    $(document).ready(function(){
-        var a_index = 0;
-        $("body").click(function(e){
-            var a = new Array("¸»Ç¿", "ÃñÖ÷", "ÎÄÃ÷", "ºÍĞ³", "×ÔÓÉ", "Æ½µÈ", "¹«Õı" ,"·¨ÖÎ", "°®¹ú", "¾´Òµ", "³ÏĞÅ", "ÓÑÉÆ");
-            var $i = $("<span/>").text(a[a_index]);
-            a_index = (a_index + 1) % a.length;
-            var x = e.pageX,y = e.pageY;
-            $i.css({
-                "z-index": 99999,
-                "top": y - 20,
-                "left": x,
-                "position": "absolute",
-                "font-weight": "bold",
-                "color": "#ff6651"
-            });
-            $("body").append($i);
-            $i.animate({"top": y-180,"opacity": 0},1500,function() {
-                $i.remove();
-            });
-        });
+(function() {
+    var coreSocialistValues = ["å¯Œå¼º", "æ°‘ä¸»", "æ–‡æ˜", "å’Œè°", "è‡ªç”±", "å¹³ç­‰", "å…¬æ­£", "æ³•æ²»", "çˆ±å›½", "æ•¬ä¸š", "è¯šä¿¡", "å‹å–„"]
+      , index = Math.floor(Math.random() * coreSocialistValues.length);
+    document.body.addEventListener('click', function(e) {
+        if (e.target.tagName == 'A') {
+            return;
+        }
+        var x = e.pageX
+          , y = e.pageY
+          , span = document.createElement('span');
+        span.textContent = coreSocialistValues[index];
+        index = (index + 1) % coreSocialistValues.length;//å–æ¨¡å¾ªç¯
+        span.style.cssText = ['z-index: 9999999; position: absolute; font-weight: bold; color: #ff6651; top: ', y - 20, 'px; left: ', x, 'px;'].join('');
+        document.body.appendChild(span);
+        animate(span);
     });
-    </script>
+    function animate(el) {//åŠ¨ç”»
+        var i = 0
+          , top = parseInt(el.style.top)
+          , id = setInterval(frame, 16.7);
+        function frame() {//å¸§
+            if (i > 180) {
+                clearInterval(id);
+                el.parentNode.removeChild(el);
+            } else {
+                i += 2;
+                el.style.top = top - i + 'px';
+                el.style.opacity = (180 - i) / 180;
+            }
+        }
+    }
+}());
