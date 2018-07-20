@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LeetCode初级算法-数=字符串（上）"
+title:  "LeetCode初级算法-字符串（上）"
 date:   2018-07-20
 author: MinicitY
 categories: LeetCode
@@ -22,6 +22,10 @@ tags: 字符串
 >Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−231,  231 − 1]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.
 
 利用取余数的性质。
+
+
+
+
 ```java
 class Solution {
     public int reverse(int x){
