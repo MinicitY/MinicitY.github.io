@@ -100,10 +100,28 @@ LIST-SEARCH(L,k)
 
 ```java
 LIST-INSERT(L, x)
- 
+ x.next = L.head//把x的后继节点设为L.head
+ if L.head != NIL
+  L.head.prev = x
+ L.head = x
+ x.prev = NIL//把x的前驱节点设为NIL
 ```
 
+这是往链表的最前头插入一个元素，运行时间是O(1)。如果要将元素插入指定地点，则先搜索到指定地点，设定插入元素的prev和next，再删除前后节点之间的关系（如果插入的地方不是最前面或者最后面的话）。
+
 #### 链表的删除
+
+注意，这里的删除和上面插入中的删除不同，是需要先遍历，然后删除第一个找到的元素的。
+
+```java
+LIST-DELETE(L, x)
+ if x.prev != NIL
+  x.prev.next = x.next
+ else L.head = x.next//如果x是链表头则把链表头设成下一个元素
+ if x.next != NIL
+  x.next.prev = x.prev
+```
+
 
 ## **题目答案**
 

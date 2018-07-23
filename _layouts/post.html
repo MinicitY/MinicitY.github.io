@@ -102,3 +102,20 @@ layout: default
 }());
 </script>
 <script src="{{ "/js/pageContent.js " | prepend: site.baseurl }}" charset="utf-8"></script>
+
+
+<div id="gitmentContainer"></div>
+ <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script> 
+  <script> 
+  var gitment = new Gitment({ owner: 'MinicitY', 
+  repo: 'MinicitY.github.io', 
+  oauth: { 
+  client_id: '0f4b00c85f26a2641281', 
+  client_secret: '1172ce513f142ec88f5195b73fa5c66b1e3e933d',
+   }, 
+   }); 
+  gitment.render('gitmentContainer'); 
+  </script>
+
+
