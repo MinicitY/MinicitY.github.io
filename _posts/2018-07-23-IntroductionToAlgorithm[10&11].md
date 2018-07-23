@@ -3,7 +3,7 @@ layout: post
 title:  "算导注解Chapter[10&11]"
 date:   2018-07-23
 author: MinicitY
-categories: Data Structure
+categories: Data\_Structure
 tags: 栈 队列 链表 散列表
 ---
 
@@ -111,22 +111,23 @@ LIST-INSERT(L, x)
 
 #### 链表的删除
 
-注意，这里的删除和上面插入中的删除不同，是需要先遍历，然后删除第一个找到的元素的。
-
 ```java
 LIST-DELETE(L, x)
  if x.prev != NIL
   x.prev.next = x.next
- else L.head = x.next//如果x是链表头则把链表头设成下一个元素
+ else L.head = x.next//如果x是链表头则把下一个元素设成链表头
  if x.next != NIL
   x.next.prev = x.prev
 ```
 
+注意，这里的删除和上面插入中的删除不同，想要实现还需要先遍历，然后再删除第一个找到的元素。只删除的部分运行时间为O(1)，而遍历则需要Θ(n)。
+
+上述三种操作都需要对边界条件进行操作。我们可以假设链表有一个代表空指针的对象L.nil，那么它是这样的一个对象，后继同时指向表头和表尾，同时又是表头和表尾的后继。即，**L.nil.next指向表头，L.nil.head指向表尾** 。另外地，有了这样的操作后我们就不再需要 `L.head` 和 `L.tail` 这两个属性了。
+
+当然，对于一个空的链表，L.nil的前驱和后继都指向自己。代码实现简单就不一一写了。不要过分使用L.nil以造成空间浪费。
+
+## **散列表**
+
+先占着
 
 ## **题目答案**
-
-
-
-#### 第十章
-
-10.1-7  
