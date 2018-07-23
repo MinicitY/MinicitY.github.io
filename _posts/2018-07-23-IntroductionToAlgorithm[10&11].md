@@ -3,7 +3,7 @@ layout: post
 title:  "算导注解Chapter[10&11]"
 date:   2018-07-23
 author: MinicitY
-categories: Data\_Structure
+categories: Data_Structure
 tags: 栈 队列 链表 散列表
 ---
 
