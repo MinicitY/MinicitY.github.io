@@ -124,7 +124,7 @@ LIST-DELETE(L, x)
 
 上述三种操作都需要对边界条件进行操作。我们可以假设链表有一个代表空指针的对象L.nil，那么它是这样的一个对象，后继同时指向表头和表尾，同时又是表头和表尾的后继。即，**L.nil.next指向表头，L.nil.head指向表尾** 。另外地，有了这样的操作后我们就不再需要 `L.head` 和 `L.tail` 这两个属性了。
 
-当然，对于一个空的链表，L.nil的前驱和后继都指向自己。代码实现简单就不一一写了。**不要过分使用L.nil以造成空间浪费。**
+当然，对于一个空的链表，L.nil的前驱和后继都指向自己。代码实现简单就不一一写了。**不要过分使用L.nil以造成空间浪费。** （其实除了赋空指针以外，还有利用异或构建双链表，来达到逆转链表只需要O(1)等等的更神奇的操作...）
 
 ## **散列表**
 
@@ -176,3 +176,50 @@ String[] tele = {"萌妹+139xxxxxxxx","死宅+150xxxxxxxx","大佬+173xxxxxxxx"}
 其他的知识和证明不是很有了解的必要，就先到这里了。
 
 ## **题目答案**
+
+#### 第十章
+
+10.1-6
+
+```java
+popMode(stack1, stack2){
+for(Object x:stack2);
+push(stack1,pop(stack2));
+}
+
+pushMode(stack1, stack2){
+for(Object x:stack1);
+push(stack2,pop(stack1));
+}
+```
+
+每次使用pop和push方法前，先调用一次popMode或者pushMode来调整至相应的模式。如果本来就是已经是相应的模式，则不调用popMode或者pushMode，并且调用相应的pop/push，那么耗时Θ(1)，反之平均耗时Θ(n/2+1)。
+
+10.1-7
+
+```java
+transfer(queueA, queueB){
+for(Object x:queueA)//except the last element
+enqueue(queueB, dequeue(queueA));
+dequeue(queueA);//dequeue the last element
+}
+
+if(queue1.isEmpty)
+transfer(queue2, queue1);
+else
+transfer(queue1, queue2);
+```
+
+push的话跟enqueue是一样的，pop的话用另一个队列来储存上一个队列，直到最后一个值，并且放出最后一个值。
+
+10-2
+
+可以去了解一下二项堆(Binomial Heap)，用链表来实现的一种可合并堆。可合并堆的概念在后面的「斐波那契堆」中会提到，这里篇幅太长就不写了。
+
+#### 第十一章
+
+11.2-1
+
+这是一个典型的数学问题。利用随机变量指示器描述两个不同关键字被散列到同一个槽的概率，然后求和得到结果，(n*(n-1))/(2m)。
+
+这一章数学题很多……没什么研究的必要。
