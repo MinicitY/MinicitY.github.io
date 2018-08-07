@@ -4,7 +4,7 @@ title:  "HDFS概念和MapReduce原理"
 date:   2018-08-04
 author: MinicitY
 categories: Big_Data
-tags: HDFS MapReduce
+tags: MapReduce HDFS
 ---
 
 * content
@@ -76,4 +76,40 @@ _HDFS体系结构_
 HDFS适合数据批量读写，吞吐量高，也适合一次写入多次读取，按顺序读写；但不适合交互式应用，很难满足低延迟的要求，也不支持用户并发地写相同的文件。
 
 #### HDFS使用
+
+现在我们来用Hadoop实现一下HDFS系统。HDFS中有shell接口，因此我们在linux系统里可以像linux的命令行一样使用HDFS的命令。
+
+![](https://raw.githubusercontent.com/MinicitY/MyImg/master/Hadoop/Hadoop%E5%B8%B8%E8%A7%81%E6%8C%87%E4%BB%A4.png)
+
+_Hadoop拥有的命令_
+
+其中常用的命令如下：
+
+```sh
+hadoop fs -ls / #打印 / 目录文件列表 
+hadoop fs -mkdir input #创建目录 
+hadoop fs -put hadoop-env.sh input/ #上传文件 hadoop-env.sh 到 input 目录下 
+hadoop fs -get input/abc.sh hadoop-envcomp.sh #从 input 目录中下载文件
+hadoop fs -rmr  #hadoop删除文件命令
+hadoop namenode -formet #hadoop格式化操作 
+hadoop dfsadmin -report #hadoop查看存储信息
+```
+
+现在看看我们是怎么具体实现HDFS的读写操作的。
+
+![](https://raw.githubusercontent.com/MinicitY/MyImg/master/Hadoop/HDFS%E5%AE%9E%E7%8E%B0%EF%BC%881%EF%BC%89.png)
+
+_把hadoop-env.sh文件写入input目录中_
+
+![](https://raw.githubusercontent.com/MinicitY/MyImg/master/Hadoop/HDFS%E5%AE%9E%E7%8E%B0%EF%BC%882%EF%BC%89.png)
+
+_读取文件，并下载到本地_
+
+上述就是从客户端（也就是命令行）上传文件（发出写入请求）与下载文件（发出读取请求）的过程。
+
+#### **MapReduce**
+
+#### 原理
+
+#### 运行流程
 
