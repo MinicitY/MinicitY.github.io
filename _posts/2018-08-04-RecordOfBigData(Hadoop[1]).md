@@ -97,11 +97,11 @@ hadoop dfsadmin -report #hadoop查看存储信息
 
 现在看看我们是怎么具体实现HDFS的读写操作的。
 
-![](https://raw.githubusercontent.com/MinicitY/MyImg/master/Hadoop/HDFS%E5%AE%9E%E7%8E%B0%EF%BC%881%EF%BC%89.png)
+![](https://raw.githubusercontent.com/MinicitY/MyImg/master/Hadoop/HDFS%E5%AE%9E%E7%8E%B0%EF%BC%88%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6%EF%BC%89.png)
 
 _把hadoop-env.sh文件写入input目录中_
 
-![](https://raw.githubusercontent.com/MinicitY/MyImg/master/Hadoop/HDFS%E5%AE%9E%E7%8E%B0%EF%BC%882%EF%BC%89.png)
+![](https://raw.githubusercontent.com/MinicitY/MyImg/master/Hadoop/HDFS%E5%AE%9E%E7%8E%B0%EF%BC%88%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%EF%BC%89.png)
 
 _读取文件，并下载到本地_
 
