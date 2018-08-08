@@ -111,5 +111,28 @@ _读取文件，并下载到本地_
 
 #### 原理
 
+MapReduce的本质是Map-Reduce的批处理计算模型。Map指的是把一个大任务分割成多个小的子任务，Reduce指的是把子任务执行完后的结果合并的规约过程。可以看出，MapReduce也存在着分治法的思想。
+
+比如，我们要从大容量的网络访问日志文件中，找出访问次数最多的IP地址。MapReduce先把日志切分成几个子任务，并统计IP出现的次数。接着任务间互相交换结果，把各个IP地址的访问结果统计出来，最后中间结果合并，排序，就知道了哪个IP地址访问次数最多了。
+
+![](https://raw.githubusercontent.com/MinicitY/MyImg/master/Hadoop/MapReduce%E5%8E%9F%E7%90%86%E5%9B%BE.png)
+
+MapReduce的优缺点很多，分布式可以让超级服务器才能处理的数据让多台小机器也能实现，但是性能比较糟糕。显然，MapReduce适用于大规模数据集的**并行运算**。
+
 #### 运行流程
+
+![](https://raw.githubusercontent.com/MinicitY/MyImg/master/Hadoop/MapReduce%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
+
+可以类比在HDFS中的结构设计，JobTracker近似于NameNode，而TaskTracker近似于DataNode。实际上它们确实是一类节点，这样也能保证数据传输的稳定性。JobTracker有如下职责：
+
+- 作业调度（FIFO之类的）
+- 分配任务、监控任务的执行进度
+- 监控TaskTracker的状态
+
+而TaskTracker反而比较简单：
+
+- 执行Map和Reduce的任务
+- 汇报任务状态
+
+MapReduce的容错机制主要是重复执行（先不管对不对，重复执行四遍再说）和推测执行（对于执行慢的任务，新建一个TaskTracker执行相同任务，选两者中最先完成的结果，并终止还没完成的任务）。
 
