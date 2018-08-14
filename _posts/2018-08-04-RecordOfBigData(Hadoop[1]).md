@@ -4,7 +4,7 @@ title:  "HDFS概念和MapReduce原理"
 date:   2018-08-04
 author: MinicitY
 categories: Big_Data
-tags: MapReduce HDFS
+tags: MapReduce HDFS Hadoop
 ---
 
 * content
