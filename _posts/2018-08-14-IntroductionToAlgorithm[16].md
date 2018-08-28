@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "算导注解Chapter[16]"
-date:   2018-08-14
+title:  "算导注解目录"
+date:   2018-08-29
 author: MinicitY
 categories: Algorithm
 tags:
@@ -30,3 +30,5 @@ tags:
 目前还剩下「高级数据结构」、「图论」和一些经典算法问题没有写，估计要是写完能多五六个超链接吧。
 
 如果哪一天又想写点什么了，或者工作上需要用到的话，会更新点的。
+
+ 2018.08.29 记于深圳
